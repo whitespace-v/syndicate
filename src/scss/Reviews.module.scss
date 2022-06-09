@@ -1,0 +1,61 @@
+@import "variables";
+.Reviews{
+  &__title{
+    font-size: $f-middle;
+    margin-bottom: 10px ;
+  }
+  &__cards{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    &-card{
+      background-color: $darkgray;
+      border-radius: 12px;
+      user-select: none;
+      margin-bottom: 50px;
+      padding: 5px;
+      &-name{
+        text-align: center;
+        font-size: $f-primary;
+        margin: 10px 0 5px 0;
+      }
+      &-service{
+        text-align: center;
+        color: $gray;
+        font-size: $f-min;
+      }
+      &-mark{
+        margin: 10px 0;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+      }
+      &-review{
+        color: $gray;
+        margin: 10px 0 0 20px;
+        font-size: $f-min;
+        height: 300px;
+      }
+      &-date{
+        font-size: $f-min;
+        color: $gray;
+        margin: 0 10px 10px 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+:global{
+  .swiper-pagination-bullet-active{
+    background-color: #ac3ab4 !important;
+  }
+  .swiper-pagination-bullet-active-prev,
+  .swiper-pagination-bullet-active-next{
+    background-color: #ff0000 !important;
+  }
+  .swiper-pagination-bullet-active-prev-prev,
+  .swiper-pagination-bullet-active-next-next{
+    background-color: #b43a71 !important;
+  }
+}

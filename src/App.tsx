@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./hoc/Layout/Layout";
+import Header from "./components/Header/Header";
+import Intro from "./components/Intro/Intro";
+import Reviews from "./components/Reviews/Reviews";
+import SetReview from "./components/SetReview/SetReview";
+import Information from "./components/Information/Information";
+import Contacts from "./components/Contacts/Contacts";
+import Services from "./components/Services/Services";
+import PortfolioMenu from "./components/Portfolio/PortfolioMenu";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Header/>
+            <Layout>
+                <Intro/>
+                <Services/>
+                <PortfolioMenu/>
+                <Information/>
+                <Reviews/>
+                <SetReview/>
+                <Contacts/>
+            </Layout>
+        </>
+    );
 }
 
 export default App;

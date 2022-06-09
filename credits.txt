@@ -1,0 +1,7 @@
+emailJS + mail.ru:
+login: syndicate-reciever@mail.ru
+password: H#&FH#^SK33d7  ->  23kj4g23jf4ghdITUGDCS&*O5
+serviceID: service_4vi8qrg
+third party app: Syndicate-sender
+password: KFwn1wFp0UaQ8Pu7hWCF
+

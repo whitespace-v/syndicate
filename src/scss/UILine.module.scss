@@ -1,0 +1,23 @@
+@import 'variables';
+.vertical{
+  width: 6px;
+  height: 60px;
+  background: $horizontal-gradient;
+  display: block;
+}
+.horizontal{
+  width: 60px;
+  height: 6px;
+  background: $gradient;
+  display: block;
+}
+.left{
+  margin: 40px 0;
+}
+.center{
+  margin: 40px auto;
+}
+.right{
+  margin-top: 40px;
+  margin-left: auto;
+}

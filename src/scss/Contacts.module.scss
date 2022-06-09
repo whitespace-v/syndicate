@@ -1,0 +1,58 @@
+@import "variables";
+.Contacts{
+  &__info{
+    &-logo{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      img:first-child{
+        width: 50px;
+      }
+      img:last-child{
+        height: 50px;
+      }
+    }
+    &-credentials{
+      display: flex;
+      justify-content: space-between;
+      &-block{
+        &:first-child > :nth-child(odd){
+          margin-bottom: 15px;
+        }
+        &:not(:first-child) > * {
+          margin-bottom: 25px;
+        }
+        &-subheader{
+          color: $gray;
+          text-indent: 20px;
+        }
+        a{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .title{
+    font-size: $f-middle;
+    margin-bottom: 20px;
+  }
+  &__map{
+    & > div{
+      width: 100% !important;
+      height: 600px !important;
+      margin-bottom: 30px;
+
+    }
+    :global{
+      .ymaps-2-1-79-copyright__wrap{
+        display: none !important;
+      }
+      .ymaps-2-1-79-map-copyrights-promo{
+        display: none !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "variables";
+.Intro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 200px;
+  margin-bottom: 120px;
+  &__text{
+    position: relative;
+    &-header{
+      background: $gradient;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text !important;
+      font-size: $f-huge;
+      font-weight: $fw-huge;
+    }
+    &-subheader{
+      line-height: 1.5em;
+      font-size: $f-middle;
+    }
+    &-ad{
+      line-height: 2em;
+      color: $gray;
+      font-size: $f-primary;
+    }
+    &-buttons{
+      display: flex;
+      & > * {
+        margin: 10px 20px 0 0;
+      }
+    }
+  }
+  &__image{
+    img{
+      width: 800px;
+      pointer-events: none !important;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
+@media (max-width: 1380px) {
+  .Intro{
+    gap: calc(20px + (150 - 20) * ((100vw - 320px) / (1650 - 320)));
+
+    &__text{
+      &-header{
+        font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1650 - 320)));
+      }
+      &-subheader{
+        font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1650 - 320)));
+      }
+      &-ad{
+        font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1650 - 320)));
+      }
+    }
+  }
+}

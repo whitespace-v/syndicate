@@ -1,0 +1,32 @@
+@import "variables";
+.Modal{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(131, 58, 180,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .5s;
+  pointer-events: none;
+  z-index: 99999;
+  &.visible{
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.Modal__data{
+  border-radius: 12px;
+  border: 3px solid white;
+  box-shadow: 1px 1px 50px #833AB4;
+  background-color: $darkgray;
+  transition: 0.4s all;
+  transform: rotate(30deg) scale(0.1);
+  padding: 60px;
+  &.visible{
+    transform: scale(1);
+  }
+}
