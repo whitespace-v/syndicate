@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
+import React from 'react';
 import classes from '../../scss/Services.module.scss';
 import ServicesTree from "./ServicesTree";
 import ServiceCard from "./ServiceCard";
 import UILine from "../../UIKit/UILine";
 
-const Services:FC = () => {
+const Services = ({refProp}: {refProp: React.Ref<any>}) => {
     return (
-        <div className={classes['Services']}>
+        <div className={classes['Services']} ref={refProp}>
             <UILine type={'horizontal'} position={'left'}/>
             <div className={classes['Services__title']}>Каталог услуг:</div>
             <div className={classes['Services__content']}>

@@ -1,22 +1,26 @@
-import React, {useState} from 'react';
-import UIModal from "../../UIKit/UIModal";
+import React, {useEffect} from 'react';
+import {Transition} from "react-transition-group";
 import OfferModal from "./OfferModal";
-import ConsultationModal from "./ConsultationModal";
+import {useAppSelector} from "../../hooks/redux";
 import disableScroll from "disable-scroll";
+import ConsultationModal from "./ConsultationModal";
 
 const Modals = () => {
-    const [visibleConsultationModal, setVisibleConsultationModal] = useState(false)
-    const [visibleOfferModal, setVisibleOfferModal] = useState(false)
-    visibleOfferModal || visibleConsultationModal ? disableScroll.on() : disableScroll.off()
+    const {offer, consultation} = useAppSelector(state => state.modalReducer)
+
+    useEffect(() => {
+        offer || consultation ? disableScroll.on() : disableScroll.off()
+    }, [offer, consultation])
+
     return (
         <>
-            <UIModal visible={visibleOfferModal} setVisible={setVisibleOfferModal}>
-                <OfferModal/>
-            </UIModal>
+            <Transition in={offer} timeout={200} mountOnEnter unmountOnExit>
+                { state => <OfferModal transition={state}/>}
+            </Transition>
 
-            <UIModal visible={visibleConsultationModal} setVisible={setVisibleConsultationModal}>
-                <ConsultationModal/>
-            </UIModal>
+            <Transition in={consultation} timeout={200} mountOnEnter unmountOnExit>
+                { state => <ConsultationModal transition={state}/>}
+            </Transition>
         </>
     );
 };

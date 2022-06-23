@@ -7,8 +7,11 @@ const ContactsMap = () => {
 
     return (
         <div className={classes['Contacts__map']}>
+            {/*@ts-ignore*/}
             <YMaps>
+                {/*@ts-ignore*/}
                 <Map defaultState={{ center: [43.137064, 131.899651], zoom: 14.5 }}>
+                    {/*@ts-ignore*/}
                     <Placemark
                         geometry={[43.137558, 131.899725]}
                         options={{

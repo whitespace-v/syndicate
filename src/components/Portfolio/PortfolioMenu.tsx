@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import classes from '../../scss/Portfolio.module.scss'
 import UIText from "../../UIKit/UIText";
 import UILine from "../../UIKit/UILine";
@@ -6,14 +6,14 @@ import Gallery from "./Gallery";
 import CardStack from "./CardStack";
 import {Transition} from "react-transition-group";
 
-const PortfolioMenu = () => {
+const PortfolioMenu = ({refProp}: {refProp: React.Ref<any>}) => {
     const [active, setActive] = useState(true)
 
     const [galleryExited, setGalleryExited] = useState(false)
     const [cardsExited, setCardsExited] = useState(true)
 
     return (
-        <div className={classes['Portfolio']}>
+        <div className={classes['Portfolio']} ref={refProp}>
             <UILine type={'vertical'} position={'center'}/>
 
             <div className={classes['Portfolio__buttons']}>

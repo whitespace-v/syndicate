@@ -1,28 +1,26 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-interface ModalState {
-    visibleConsultationModal: boolean;
-    visibleOfferModal: boolean;
+interface ModalsState{
+    consultation: boolean
+    offer: boolean
 }
 
-const initialState: ModalState = {
-    visibleConsultationModal: false,
-    visibleOfferModal: false
-}
+const initialState: ModalsState = {
+    consultation: false,
+    offer: false
 
+}
 export const modalSlice = createSlice({
-        name: 'modal',
-        initialState,
-        reducers: {
-            consultationOpen(state) {
-                state.visibleConsultationModal = true
-                state.visibleOfferModal = false
-            },
-            offerOpen(state) {
-                state.visibleOfferModal = true
-                state.visibleConsultationModal = false
-            }
-        }
+    name: 'modal',
+    initialState,
+    reducers: {
+        consultationHandler(state){
+            state.consultation = !state.consultation;
+        },
+        offerHandler(state){
+            state.offer = !state.offer
+        },
     }
-)
+})
+
 export default modalSlice.reducer

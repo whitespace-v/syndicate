@@ -1,29 +1,28 @@
 import React, {useState} from 'react';
-import classesSetForm from "../../scss/SetReview.module.scss";
-import {FaAngleDown, FaCheck, FaShare, FaTimesCircle} from "react-icons/fa";
+import classes from "../../scss/UIModal.module.scss";
+import {FaAngleDown, FaShare, FaTimes} from "react-icons/fa";
 import InputMask from "react-input-mask";
 import UIButton from "../../UIKit/UIButton";
-import {postOffer} from "../../store/reducers/ActionCreators";
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import UILoader from "../../UIKit/UILoader";
+import {modalHandler, postOffer} from "../../store/reducers/ActionCreators";
+import {useAppDispatch} from "../../hooks/redux";
+import input__class from "../../scss/UIInput.module.scss";
 
-const OfferModal = () => {
+const OfferModal = ({transition}: {transition: string}) => {
+
     const dispatch = useAppDispatch()
-
-    const {offerError, offerSuccess, isOfferLoading} = useAppSelector(state => state.offerReducer)
-
     const [name, setName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
+    const [nameError, setNameError] = useState('')
     const [phone, setPhone] = useState('')
     const [phoneTouched, setPhoneTouched] = useState(false)
     const [phoneError, setPhoneError] = useState('')
-    const [nameError, setNameError] = useState('')
     const [service, setService] = useState('Услуга')
     const [serviceError, setServiceError] = useState('')
     const [serviceActive, setServiceActive] = useState(false)
+
     const serviceActiveHandler = (e: React.MouseEvent<HTMLDivElement>) => {
         e.preventDefault()
-        serviceActive ? setServiceActive(false) : setServiceActive(true)
+        setServiceActive(!serviceActive)
     }
     const serviceHandler = (e: React.MouseEvent<HTMLDivElement>, s: string) => {
         e.preventDefault()
@@ -34,8 +33,8 @@ const OfferModal = () => {
         }
     }
     const services = [
-        'Пленка (Кузов)','Полировка','Защитное покрытие',
-        'Дооснащение','Химчистка','Пленка (Салон)','Чистка / Защита кожи', 'Шумоизоляция'
+        'Пленка','Полировка','Защита',
+        'Дооснащение','Химчистка','Чистка кожи', 'Шумоизоляция'
     ]
     const phoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
@@ -87,81 +86,50 @@ const OfferModal = () => {
             setService('Услуга')
         }
     }
+
     return (
-        <div className={classesSetForm['SetReview__form']}>
-            <div className={classesSetForm['SetReview__form-control']}>
-                <p
-                    className={classesSetForm['SetReview__form-control-pseudotitle']}
-                >Запись онлайн</p>
+        <div className={classes['UIModal'] + ' ' + classes[transition]}>
+            <div className={classes['UIModal__container'] + ' ' + classes[transition]}>
+                <div className={classes['UIModal__container-cross']}
+                     onClick={() => dispatch(modalHandler('offer'))}
+                ><FaTimes/></div>
+                <p className={classes['UIModal__container-title']}>Быстрая запись</p>
+                <p className={classes['UIModal__container-fieldName']}>Имя</p>
                 <input
-                    type="text"
-                    value={name}
-                    placeholder={'Имя'}
-                    maxLength={15}
-                    onChange={e => nameHandler(e)}
-                    className={nameError ? classesSetForm['SetReview__form-control-input-error'] :
-                        classesSetForm['SetReview__form-control-input']
-                    }
+                    type="text" value={name} maxLength={15} onChange={e => nameHandler(e)}
+                    className={ nameError ? input__class['input'] + ' ' + input__class['error'] : input__class['input']}
                 />
-                {nameError && <span>{nameError}</span>}
-                <div className={classesSetForm['SetReview__form-control-service']}>
-                    <div
-                        className={serviceError && service === 'Услуга' ?
-                            classesSetForm['SetReview__form-control-service-title-error'] : classesSetForm['SetReview__form-control-service-title']}
-                        onClick={e => serviceActiveHandler(e)}
-                        style={service === 'Услуга' ? {color: '#7F7F7F'} : {color: 'white'}}
-                    >
-                        {service}
-                        <FaAngleDown/>
+
+                <div className={classes['UIModal__container-service']}>
+
+                    <div className={ serviceError ? classes['UIModal__container-service-selected'] + ' ' + classes['error']
+                        : classes['UIModal__container-service-selected']
+                    }
+                         onClick={e => serviceActiveHandler(e)}>
+                        {service}<FaAngleDown/>
                     </div>
 
                     <div
-                        className={serviceActive
-                            ? classesSetForm['SetReview__form-control-service-box-active'] :
-                            classesSetForm['SetReview__form-control-service-box-disable']}
+                        className={serviceActive ?
+                            classes['UIModal__container-service-options'] :
+                            classes['UIModal__container-service-options'] + ' ' + classes['disabled']}
                     >
-                        {services.map(s => (
-                            <div onClick={e => serviceHandler(e, s)} key={s}>{s}</div>
-                        ))}
+                        {services.map(i => (<div onClick={e => serviceHandler(e, i)} key={i}>{i}</div>))}
                     </div>
+
                 </div>
-                {serviceError && <span>{serviceError}</span>}
-
+                <p className={classes['UIModal__container-fieldName']}>Номер телефона</p>
                 <InputMask
-                    type="text"
-                    value={phone}
-                    placeholder={'Номер телефона'}
+                    type="text" value={phone} mask="+7\(999) 999-99-99"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => phoneHandler(e)}
-                    className={phoneError ? classesSetForm['SetReview__form-control-input-error'] :
-                        classesSetForm['SetReview__form-control-input']
-                    }
-                    mask="+7\(999) 999-99-99"
+                    className={phoneError ? input__class['input'] + ' ' + input__class['error'] : input__class['input']}
                 />
-                {phoneError && <span>{phoneError}</span>}
 
-                <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div className={classes['UIModal__container-button']}>
                     <UIButton type={'outline'} onClick={e => sendHandler(e)}><FaShare/> Записаться! </UIButton>
                 </div>
-                {offerSuccess && !isOfferLoading &&
-                    <p
-                        style={{
-                            display: "flex",
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            gap: 5
-                        }}
-                    ><FaCheck/> Вы успешно отправили заявку !</p>
-                }
-                {offerError && !isOfferLoading && <p
-                    style={{
-                        display: "flex",
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: 5
-                    }}
-                > <FaTimesCircle/> {offerError}</p>}
-                {isOfferLoading && <UILoader/>}
             </div>
+
         </div>
     );
 };

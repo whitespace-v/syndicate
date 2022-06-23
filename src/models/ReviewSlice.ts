@@ -4,7 +4,6 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 interface ReviewState{
     reviews: IReview[];
     isFetchingLoading: boolean;
-    isPostingLoading: boolean;
     error: string;
     success?: string;
 }
@@ -12,7 +11,6 @@ interface ReviewState{
 const initialState: ReviewState = {
     reviews: [],
     isFetchingLoading: false,
-    isPostingLoading: false,
     error: '',
     success: ''
 
@@ -30,18 +28,6 @@ export const reviewSlice = createSlice({
         },
         reviewsFetchingError(state, action: PayloadAction<string>){
             state.isFetchingLoading = false;
-            state.error = action.payload
-        },
-        reviewsPosting(state){
-            state.isPostingLoading = true;
-        },
-        reviewsPostingSuccess(state, action: PayloadAction<string>){
-            state.isPostingLoading = false;
-            state.success = action.payload;
-            state.error = '';
-        },
-        reviewsPostingError(state, action: PayloadAction<string>){
-            state.isPostingLoading = false;
             state.error = action.payload
         }
     }

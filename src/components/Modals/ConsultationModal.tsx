@@ -1,22 +1,21 @@
 import React, {useState} from 'react';
-import classesSetForm from "../../scss/SetReview.module.scss";
-import {FaCheck, FaShare, FaTimesCircle} from "react-icons/fa";
+import classes from "../../scss/UIModal.module.scss";
+import {FaShare, FaTimes} from "react-icons/fa";
 import InputMask from "react-input-mask";
 import UIButton from "../../UIKit/UIButton";
-import {postConsultation} from "../../store/reducers/ActionCreators";
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import UILoader from "../../UIKit/UILoader";
+import {modalHandler, postConsultation} from "../../store/reducers/ActionCreators";
+import {useAppDispatch} from "../../hooks/redux";
+import input__class from "../../scss/UIInput.module.scss";
 
-const ConsultationModal = () => {
+const ConsultationModal = ({transition}: {transition: string}) => {
     const dispatch = useAppDispatch()
-    const {consultationError, isConsultationLoading, consultationSuccess} = useAppSelector(state => state.offerReducer)
-
     const [name, setName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
     const [phone, setPhone] = useState('')
     const [phoneTouched, setPhoneTouched] = useState(false)
     const [phoneError, setPhoneError] = useState('')
     const [nameError, setNameError] = useState('')
+
     const phoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
         setPhoneTouched(true)
@@ -28,6 +27,7 @@ const ConsultationModal = () => {
             setPhoneError('')
         }
     }
+
     const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
         setNameTouched(true)
@@ -62,57 +62,28 @@ const ConsultationModal = () => {
     }
 
     return (
-        <div className={classesSetForm['SetReview__form']}>
-            <div className={classesSetForm['SetReview__form-control']}>
-                <p
-                    className={classesSetForm['SetReview__form-control-pseudotitle']}
-                >Заказать консультацию</p>
+        <div className={classes['UIModal'] + ' ' + classes[transition]}>
+            <div className={classes['UIModal__container'] + ' ' + classes[transition]}>
+                <div className={classes['UIModal__container-cross']}
+                     onClick={() => dispatch(modalHandler('consultation'))}
+                ><FaTimes/></div>
+                <p className={classes['UIModal__container-title']}>Консультация</p>
+                <p className={classes['UIModal__container-fieldName']}>Имя</p>
                 <input
-                    type="text"
-                    value={name}
-                    placeholder={'Имя'}
-                    maxLength={15}
-                    onChange={e => nameHandler(e)}
-                    className={nameError ? classesSetForm['SetReview__form-control-input-error'] :
-                        classesSetForm['SetReview__form-control-input']
-                    }
+                    type="text" value={name} maxLength={15} onChange={e => nameHandler(e)}
+                    className={ nameError ? input__class['input'] + ' ' + input__class['error'] : input__class['input']}
                 />
-                {nameError && <span>{nameError}</span>}
-
+                <p className={classes['UIModal__container-fieldName']}>Номер телефона</p>
                 <InputMask
-                    type="text"
-                    value={phone}
-                    placeholder={'Номер телефона'}
+                    type="text" value={phone} mask="+7\(999) 999-99-99"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => phoneHandler(e)}
-                    className={phoneError ? classesSetForm['SetReview__form-control-input-error'] :
-                        classesSetForm['SetReview__form-control-input']
-                    }
-                    mask="+7\(999) 999-99-99"
+                    className={phoneError ? input__class['input'] + ' ' + input__class['error'] : input__class['input']}
                 />
-                {phoneError && <span>{phoneError}</span>}
-
-                <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div className={classes['UIModal__container-button']}>
                     <UIButton type={'outline'} onClick={e => sendHandler(e)}><FaShare/> Записаться! </UIButton>
                 </div>
-                {consultationSuccess && !isConsultationLoading &&
-                    <p
-                        style={{
-                            display: "flex",
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            gap: 5
-                        }}
-                    ><FaCheck/> Вы успешно отправили заявку !</p>
-                }
-                {consultationError && !isConsultationLoading && <p
-                    style={{
-                        display: "flex",
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: 5
-                    }}
-                > <FaTimesCircle/> {consultationError}</p>}
-                {isConsultationLoading && <UILoader/>} </div>
+
+            </div>
         </div>
     );
 };

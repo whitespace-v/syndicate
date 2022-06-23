@@ -1,26 +1,29 @@
-import React, {FC, useEffect, useState} from 'react';
+import React from 'react';
 import classes from '../../scss/Header.module.scss'
 import logo from '../../assets/Logo/logo.webp'
 import name from '../../assets/Logo/logoName.webp'
 import UIText from "../../UIKit/UIText";
-import {FaHeadset, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaTelegramPlane, FaWhatsapp, FaYoutube} from "react-icons/fa";
+import {FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaShare, FaTelegramPlane, FaWhatsapp, FaYoutube} from "react-icons/fa";
 import UIButton from '../../UIKit/UIButton';
-import disableScroll from "disable-scroll";
-import UIModal from "../../UIKit/UIModal";
-import ConsultationModal from "../Modals/ConsultationModal";
+import {useAppDispatch} from "../../hooks/redux";
+import {modalHandler} from "../../store/reducers/ActionCreators";
 
 
-const Header:FC = () => {
-    const [visibleConsultationModal, setVisibleConsultationModal] = useState(false)
+interface IHeader {
+    IntroScroll: () => void
+    ContactsScroll: () => void
+    ServicesScroll: () => void
+    PortfolioScroll: () => void
+    InformationScroll: () => void
+    ReviewsScroll:() => void
+}
 
-    useEffect(() => {
-        visibleConsultationModal ? disableScroll.on() : disableScroll.off()
-    }, [visibleConsultationModal])
+const Header = (props: IHeader) => {
+    const dispatch = useAppDispatch()
 
     return (
         <div className={classes['Header']}>
             <div className={classes['Header__links']}>
-
                 <div className={classes['Header__links-intro']}>
                     <div className={classes['Header__links-intro-logo']}>
                         <img src={logo} alt="" width={50}/>
@@ -36,25 +39,23 @@ const Header:FC = () => {
 
                 <div className={classes['Header__links-phones']}>
                     <UIText type={'primary'}> <a href='tel:+79644444847'> <FaPhoneAlt/> +7 (964) 444-48-47</a></UIText>
-                    <UIButton type={'outline'} onClick={() => setVisibleConsultationModal(true)}> <FaHeadset/> Консультация</UIButton>
+                    <UIButton type={'outline'} onClick={() => dispatch(modalHandler('offer'))}> <FaShare/> Записаться</UIButton>
                 </div>
             </div>
 
             <div className={classes['Header__nav']}>
                 <div className={classes['Header__nav-container']}>
-                    <UIText type={'solid'} > <a>Главная</a></UIText>
-                    <UIText type={'primary'}> <a>Услуги</a></UIText>
-                    <UIText type={'primary'}> <a>Портфолио</a></UIText>
-                    <UIText type={'primary'}> <a>О нас</a></UIText>
-                    <UIText type={'primary'}> <a>Контакты</a></UIText>
+                    <UIText type={'solid'} onClick={props.IntroScroll}> <a>Главная</a></UIText>
+                    <UIText type={'primary'} onClick={props.ServicesScroll}> <a>Услуги</a></UIText>
+                    <UIText type={'primary'} onClick={props.PortfolioScroll}> <a>Портфолио</a></UIText>
+                    <UIText type={'primary'} onClick={props.InformationScroll}> <a>О нас</a></UIText>
+                    <UIText type={'primary'} onClick={props.ReviewsScroll}> <a>Отзывы</a></UIText>
+                    <UIText type={'primary'} onClick={props.ContactsScroll}> <a>Контакты</a></UIText>
                 </div>
                 <div className={classes['Header__nav-address']}>
                     <UIText type={'primary'}> <a href='https://go.2gis.com/615y5'><FaMapMarkerAlt/> г. Владивосток, Океанский проспект, 49</a></UIText>
                 </div>
             </div>
-            <UIModal visible={visibleConsultationModal} setVisible={setVisibleConsultationModal}>
-                <ConsultationModal/>
-            </UIModal>
         </div>
     );
 };

@@ -20,7 +20,7 @@
     }
     :global {
       .css-1g86id8-MuiTreeItem-content .MuiTreeItem-label{
-        font-size: $f-primary !important;
+        font-size: $f-min !important;
         font-weight: $fw-huge;
         font-family: inherit;
         width: fit-content;
@@ -44,7 +44,7 @@
   &__card{
     background-color: $darkgray;
     border-radius: 12px;
-    width: 800px;
+    max-width: 800px;
     height: fit-content;
     padding: 15px;
     display: flex;
@@ -94,5 +94,16 @@
   100%{
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .Services{
+    &__content{
+      display: block;
+      & > * {
+        margin: 20px auto;
+      }
+    }
   }
 }

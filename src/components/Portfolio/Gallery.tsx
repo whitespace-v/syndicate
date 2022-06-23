@@ -9,7 +9,10 @@ import {Transition} from "react-transition-group";
 
 const Gallery = ({transition}: {transition: string}) => {
     const [prev, setPrev] = useState()
-    const [ImageArray] = useState([item3,item1, item2, item3,item1, item2, item3])
+    const [ImageArray] = useState([
+        item3,item1, item2, item3,item1, item2, item3,item3,
+        item1, item2, item3,item1, item2, item3, item3,item1,
+    ])
     const [slidesArray, setSlidesArray] = useState([item1, item2, item3])
     const [currentSlide, setCurrentSlide] = useState(0)
     const [prevSlide, setPrevSlide] = useState(0)
@@ -39,12 +42,13 @@ const Gallery = ({transition}: {transition: string}) => {
     }
 
     return (
-        <div className={classes['Gallery'] + ' ' + classes[transition] }>
+        <div className={classes['Gallery'] + ' ' + classes[transition]}>
             <div className={classes['Gallery__container']}>
                 {ImageArray.map((image, index) => (
                     <div
                         onClick={() => clickHandler(image)}
                         key={index} className={classes['Gallery__container-item']}
+
                     >
                         <div
                             className={classes['Gallery__container-item-image']}
@@ -55,7 +59,7 @@ const Gallery = ({transition}: {transition: string}) => {
                 ))}
             </div>
 
-            <Transition in={fullVisible} timeout={500} mountOnEnter unmountOnExit>
+            <Transition in={fullVisible} timeout={200} mountOnEnter unmountOnExit>
                 { state =>
                     <FullVisible
                         setFullVisible={setFullVisible}

@@ -4,5 +4,4 @@ export interface IService{
     subtitle: string;
     price: number[] | string;
     description: string;
-    image: any;
 }

@@ -9,7 +9,7 @@ const ServicesTree = () => {
         <div className={classes['Services__tree']}>
             <TreeView
                 aria-label="customized"
-                defaultExpanded={['1']}
+                defaultExpanded={['1', '2']}
                 defaultCollapseIcon={<FaAngleDown />}
                 defaultExpandIcon={<FaAngleRight />}
                 sx={{ width: 'fit-content',flexGrow: 1, overflowY: 'auto' }}

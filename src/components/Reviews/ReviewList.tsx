@@ -20,7 +20,12 @@ const ReviewList = () => {
     return (
         <>
             <div className={classes['Reviews__title']}>Отзывов наших клиентов: ({Object.keys(reviews).length})</div>
-            <Swiper loop={true} spaceBetween={20} slidesPerView={3} autoplay
+            <Swiper loop={true} spaceBetween={20}
+                    slidesPerView={
+                        window.matchMedia("(min-width: 1389px)").matches ? 3 :
+                            window.matchMedia("(min-width: 924px)").matches ? 2 : 1
+                    }
+                    autoplay
                     modules={[Autoplay, Pagination, A11y]} pagination={{dynamicBullets: true}}>
                 {Object.entries(reviews).map(review => (
                     <SwiperSlide key={review[0]}>

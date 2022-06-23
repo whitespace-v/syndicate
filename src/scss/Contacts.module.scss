@@ -17,10 +17,7 @@
       display: flex;
       justify-content: space-between;
       &-block{
-        &:first-child > :nth-child(odd){
-          margin-bottom: 15px;
-        }
-        &:not(:first-child) > * {
+        & > * {
           margin-bottom: 25px;
         }
         &-subheader{
@@ -36,7 +33,8 @@
     }
   }
   .title{
-    font-size: $f-middle;
+    font-size: $f-primary;
+    font-weight: $fw-middle;
     margin-bottom: 20px;
   }
   &__map{
@@ -52,6 +50,22 @@
       }
       .ymaps-2-1-79-map-copyrights-promo{
         display: none !important;
+      }
+      [class*="ymaps-2"][class*="-ground-pane"] {
+        filter: invert(100%);
+        -ms-filter: invert(100%);
+        -webkit-filter: invert(100%);
+        -moz-filter: invert(100%);
+        -o-filter: invert(100%);
+      }
+    }
+  }
+}
+@media (max-width: 810px) {
+  .Contacts{
+    &__info{
+      &-credentials{
+        flex-direction: column;
       }
     }
   }

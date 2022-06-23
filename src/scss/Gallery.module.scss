@@ -4,19 +4,15 @@
   position: relative;
   &__container{
     display: flex;
-    gap: 5px;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
     &-item{
       background-color: $darkgray;
-      padding: 20px;
-      border-radius: 20px;
       cursor: pointer;
       transition: all .2s linear;
       &-image{
-        width: 220px;
-        height: 220px;
-        border-radius: 20px;
+        width: 235px;
+        height: 235px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -28,10 +24,9 @@
       }
       &:hover{
         .Gallery__container-item-image{
-          transform: scale(1.1) rotate(-3deg);
+         opacity: 0.6;
         }
-        background: $gradient;
-        transform: rotate(3deg);
+        background: gray;
       }
     }
   }
@@ -71,10 +66,10 @@
       }
       /** Gallery__fullscreen-data **/
       &.entering{
-        animation: fullSize .5s linear forwards;
+        animation: fullSize .2s linear forwards;
       }
       &.exiting{
-        animation: fullSize .5s linear alternate-reverse;
+        animation: fullSize .2s linear alternate-reverse;
       }
     }
   }

@@ -7,11 +7,10 @@ interface ServiceState{
 const initialState: ServiceState = {
     service: {
         id: 0,
-        title: '',
-        subtitle: '',
-        price: '',
-        description: '',
-        image: null
+        title: 'Кузов',
+        subtitle: 'Кузовные работы',
+        price: 'индивидуальная',
+        description: 'Подберем идеальный вариант детейлинга для вашего автомобиля! Выполним все процедуры по уходу и защите за авто. Бесплатный осмотр и консультация!',
     }
 }
 export const serviceSlice = createSlice(({
