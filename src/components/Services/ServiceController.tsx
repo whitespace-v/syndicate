@@ -6,6 +6,7 @@ import UIButton from "../../UIKit/UIButton";
 import {FaPaperPlane, FaPlus, FaTrash} from "react-icons/fa";
 import input__class from '../../scss/UIInput.module.scss'
 import InputMask from "react-input-mask";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const ServiceController = ({transition} : {transition: string}) => {
     const {selectedService, selectedCar, selectedParts, basket} = useAppSelector(state => state.basketReducer)
@@ -16,7 +17,7 @@ const ServiceController = ({transition} : {transition: string}) => {
     const [name, setName] = useState('')
     const [nameTouched, setNameTouched] = useState(false)
     const [nameError, setNameError] = useState('')
-
+    const { width } = useWindowDimensions(); //viewport width
     const phoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
         setPhoneTouched(true)
@@ -142,7 +143,7 @@ const ServiceController = ({transition} : {transition: string}) => {
                                     input__class['input']
                                 }
                             />
-                            {nameError && <span>{nameError}</span>}
+                            {(width > 630 && nameError) && <span>{nameError}</span>}
                         </div>
                     </div>
                     <div className={classes['ServiceController__send-field']}>
@@ -158,7 +159,7 @@ const ServiceController = ({transition} : {transition: string}) => {
                                 }
                                 mask="+7\(999) 999-99-99"
                             />
-                            {phoneError && <span>{phoneError}</span>}
+                            {(width > 630 && phoneError) && <span>{phoneError}</span>}
                         </div>
                     </div>
                     <div className={classes['ServiceController__send-button']}>

@@ -19,6 +19,7 @@
       &-block{
         & > * {
           margin-bottom: 25px;
+          white-space: nowrap;
         }
         &-subheader{
           color: $gray;
@@ -61,11 +62,23 @@
     }
   }
 }
-@media (max-width: 810px) {
+@media (max-width: 800px) {
   .Contacts{
     &__info{
+      &-logo{
+        img:nth-child(1){
+          width: calc(40px + (50 - 40) * ((100vw - 320px) / (800 - 320)));
+        }
+        img:nth-child(2){
+          height: calc(40px + (50 - 40) * ((100vw - 320px) / (800 - 320)));
+        }
+      }
       &-credentials{
         flex-direction: column;
+        align-items: center;
+        &-block{
+          width: 300px;
+        }
       }
     }
   }

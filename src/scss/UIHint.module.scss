@@ -9,7 +9,7 @@
     border-radius: 20px;
     border: 1px solid white;
     box-shadow: 1px 1px 10px #833AB4;
-    background: rgba(62, 1, 100, 0.55);
+    background: rgba(49, 7, 75, 0.84);
     display: flex;
     &-text{
       margin: 10px;
@@ -51,5 +51,15 @@
   }
   100%{
     transform: translateX(0px);
+  }
+}
+@media (max-width: 1500px) {
+  .UIHint{
+    &__content{
+      &-text{
+        //width: calc(100px + (320 - 100) * ((100vw - 320px) / (1200 - 320)));
+        font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1500 - 320)));
+      }
+    }
   }
 }

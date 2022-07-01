@@ -1,7 +1,8 @@
 @import "variables";
 .Intro{
   padding: 180px 0 120px 0;
-  background-size: 110% !important;
+  background-size: cover;
+  background-repeat: no-repeat;
   &__text{
     margin-left: 80px;
     &-header{
@@ -32,7 +33,6 @@
     padding:
             calc(0px + (180 - 0) * ((100vw - 320px) / (1650 - 320))) 0
             calc(0px + (100 - 0) * ((100vw - 320px) / (1650 - 320))) 0;
-    background-size: calc(200% + (110 - 200) * ((100vw - 320px) / (1650 - 320))) !important;
     &__text{
       margin-left: calc(20px + (80 - 20) * ((100vw - 320px) / (1650 - 320)));
       &-header{
@@ -53,3 +53,11 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .Intro{
+    padding:
+            calc(60px + (180 - 60) * ((100vw - 320px) / (1650 - 320))) 0
+            calc(0px + (100 - 0) * ((100vw - 320px) / (1650 - 320))) 0;
+  }
+}
+

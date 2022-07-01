@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e723b05-ffdc-457c-acba-4d0ecf59a758" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowDimensions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Bus2.glb" beforeDir="false" afterPath="$PROJECT_DIR$/public/Bus.glb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bmw2.glb" beforeDir="false" afterPath="$PROJECT_DIR$/public/bmw.glb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Static/crown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Static/lx450.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Static/lx570heritage.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/car2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/introcar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/portfolio1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/portfolio2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/portfolio3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Temp/portfolio4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contacts/Contacts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Intro/Intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Object/Object.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Object/Object.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/CardStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/CardStack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/FullVisible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/FullVisible.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/Gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Services/ServiceController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Services/ServiceController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Bus2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Bus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Merc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Merc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/bmw2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/bmw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/CardStack.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/CardStack.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Contacts.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Contacts.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Gallery.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Gallery.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Information.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Information.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Intro.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Intro.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Object.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Object.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Reviews.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Reviews.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/ServiceController.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/ServiceController.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Services.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Services.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/Space.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/Space.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/UIHint.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/UIHint.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/UILine.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/UILine.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/UINotification.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/UINotification.module.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AKzzftzCahQ0ql1nsuO9OKTfut" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/wonderer/Desktop/projects/syndicate/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/Static" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/components/Space" />
+      <recent name="$PROJECT_DIR$/src/components/Action" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e723b05-ffdc-457c-acba-4d0ecf59a758" name="Changes" comment="" />
+      <created>1654773330236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654773330236</updated>
+      <workItem from="1654773332548" duration="3588000" />
+      <workItem from="1654790055183" duration="5144000" />
+      <workItem from="1654836528535" duration="1397000" />
+      <workItem from="1654931619605" duration="1701000" />
+      <workItem from="1655373427964" duration="1083000" />
+      <workItem from="1655537728929" duration="8960000" />
+      <workItem from="1655709044283" duration="7844000" />
+      <workItem from="1655727322530" duration="8131000" />
+      <workItem from="1655786134386" duration="22070000" />
+      <workItem from="1655880249856" duration="13000" />
+      <workItem from="1655882029730" duration="9074000" />
+      <workItem from="1655907676703" duration="4848000" />
+      <workItem from="1655962409598" duration="8785000" />
+      <workItem from="1655979483868" duration="5441000" />
+      <workItem from="1655986305217" duration="334000" />
+      <workItem from="1655998222724" duration="4691000" />
+      <workItem from="1656002937837" duration="13000" />
+      <workItem from="1656049400695" duration="1867000" />
+      <workItem from="1656052315943" duration="953000" />
+      <workItem from="1656053418624" duration="5813000" />
+      <workItem from="1656126798632" duration="318000" />
+      <workItem from="1656128883871" duration="5676000" />
+      <workItem from="1656304821122" duration="2142000" />
+      <workItem from="1656409017822" duration="669000" />
+      <workItem from="1656485972058" duration="6436000" />
+      <workItem from="1656580902633" duration="7905000" />
+      <workItem from="1656655166197" duration="1922000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

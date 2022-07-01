@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import {selectPart} from "../store/reducers/ActionCreators";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -70,7 +71,7 @@ type GLTFResult = GLTF & {
 export default function Model({dispatch} : {dispatch: any}) {
     const group = useRef<THREE.Group>()
     const { nodes, materials } = useGLTF('/merc.glb') as GLTFResult
-
+    const { width } = useWindowDimensions(); //viewport width
     const clickHandler = (e: any) => {
         let new_material = e.object.material.clone();
         let old_material = e.object.material.clone()
@@ -85,7 +86,12 @@ export default function Model({dispatch} : {dispatch: any}) {
 
     return (
         //@ts-ignore
-        <group ref={group} dispose={null} onDoubleClick={e => {e.stopPropagation(); clickHandler(e)}}>
+        <group ref={group} dispose={null}
+            //@ts-ignore
+               onDoubleClick={width > 630 ? e => {e.stopPropagation(); clickHandler(e)}: null} //desktop
+            //@ts-ignore
+               onClick={ width < 630 ? e => {e.stopPropagation(); clickHandler(e)}: null } //mobile
+        >
             <mesh name={'customName1'} geometry={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.geometry} material={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />
             <mesh name={'customName2'} geometry={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.geometry} material={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.material} position={[-72.7, 0.53, 4.83]} rotation={[1.83, -0.26, 0]} scale={2.05} />
             <mesh name={'customName3'} geometry={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.geometry} material={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />

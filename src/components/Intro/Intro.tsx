@@ -12,7 +12,7 @@ const Intro = ({refProp}: {refProp: React.Ref<any>}) => {
     return (
         <>
             <div className={classes['Intro']} ref={refProp}
-                 style={{background: `url("${introBack}") no-repeat center`}}>
+                 style={{backgroundImage: `url("${introBack}")`}}>
                 <div className={classes['Intro__text']}>
                     <p className={classes['Intro__text-header']}>Преображаем <br/> и защищаем <br/> автомобили</p>
                     <p className={classes['Intro__text-subheader']}>Центр профессионального <br/>автодетейлинга</p>

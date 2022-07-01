@@ -31,6 +31,9 @@
       display: flex;
       align-items: center;
       gap: 60px;
+      & > *:first-child{
+        white-space: nowrap;
+      }
     }
   }
   &__nav{
@@ -97,6 +100,9 @@
     }
     &__nav{
       justify-content: center;
+      &-container{
+        padding: calc(2px + (10 - 2) * ((100vw - 320px) / (810 - 320)));
+      }
     }
   }
 }

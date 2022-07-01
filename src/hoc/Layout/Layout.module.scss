@@ -10,9 +10,11 @@
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   scroll-margin-top: 150px;
+  touch-action: manipulation !important;
 }
+
 body{
-  background-color: #171717;
+  background-color: #171717 !important;
 }
 html{
   scroll-behavior: smooth;

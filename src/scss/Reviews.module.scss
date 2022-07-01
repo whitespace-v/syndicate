@@ -60,6 +60,30 @@
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
+  .Reviews {
+    &__title {
+      font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (1200 - 320))) !important;
+    }
+    &__cards{
+      &-card{
+        &-name{
+          text-align: center;
+          font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
+        }
+        &-service{
+          font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
+        }
+        &-mark{
 
+        }
+        &-review{
+          font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1200 - 320)));
+        }
+        &-date{
+          font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1200 - 320)));
+        }
+      }
+    }
+  }
 }

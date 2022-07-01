@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React  from 'react';
 import classes from '../../scss/CardStack.module.scss'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectCreative, Pagination} from "swiper";
@@ -6,34 +6,45 @@ import {EffectCreative, Pagination} from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import item1 from '../../assets/Temp/portfolio1.png'
-import item2 from '../../assets/Temp/portfolio2.png'
-import item3 from '../../assets/Temp/portfolio3.png'
-import item4 from '../../assets/Temp/portfolio4.png'
+import item1 from '../../assets/CardStack/c1-min.png'
+import item2 from '../../assets/CardStack/c2-min.png'
+import item3 from '../../assets/CardStack/c3-min.png'
+import item4 from '../../assets/CardStack/c4-min.png'
+import item5 from '../../assets/CardStack/c5-min.png'
+import item6 from '../../assets/CardStack/c6-min.png'
+import item7 from '../../assets/CardStack/c7-min.png'
 
 const CardStack = ({transition}: {transition: string}) => {
-    console.log(transition)
     const content = [
         {
+            'title': 'Чистка и защита кожи',
+            'image': item1
+        },
+        {
+            'title': 'Полировка кузова, тюнинг оптики',
+            'image': item3
+        },
+        {
+            'title': 'Полировка кузова',
+            'image': item4
+        },
+        {
+            'title': 'Нанесение бронеплёнки',
+            'image': item5
+        },
+        {
+            'title': 'Полировка кузова, чистка и защита кожи',
+            'image': item6
+        },
+        {
             'title': 'Полировка',
-            'image': item1,
-            'date' : '22.10.2001'
+            'image': item7
         },
         {
-            'title': 'Антихром',
-            'image': item2,
-            'date' : '22.10.2001'
+            'title': 'Чистка и защита кожи',
+            'image': item2
         },
-        {
-            'title': 'Ковролин',
-            'image': item3,
-            'date' : '22.10.2001'
-        },
-        {
-            'title': 'Бронеплёнка',
-            'image': item4,
-            'date' : '22.10.2001'
-        },
+
     ]
 
     return (
@@ -57,9 +68,6 @@ const CardStack = ({transition}: {transition: string}) => {
                                     {item.title}
                                 </p>
                                 <img src={item.image} alt=""/>
-                                <p className={classes['CardStack__slider-item-date']}>
-                                    {item.date}
-                                </p>
                             </div>
                         </SwiperSlide>
                     ))}

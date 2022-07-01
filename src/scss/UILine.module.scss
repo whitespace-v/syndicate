@@ -21,3 +21,14 @@
   margin-top: 40px;
   margin-left: auto;
 }
+@media (max-width: 1200px) {
+  .left{
+    margin: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .center{
+    margin: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320))) auto ;
+  }
+  .right{
+    margin-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+  }
+}

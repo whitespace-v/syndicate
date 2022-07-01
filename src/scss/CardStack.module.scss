@@ -16,8 +16,8 @@
       border-radius: 12px;
       &-title{
         text-align: center;
-        line-height: $f-huge;
         font-size: $f-primary;
+        padding: 30px 0;
       }
       &-date{
         text-align: right;
@@ -62,5 +62,17 @@
     transform: translateY(0px);
   }
 }
-
-
+@media (max-width: 1500px) {
+  .CardStack{
+    &__slider{
+      &-item{
+        width: calc(400px + (600 - 400) * ((100vw - 320px) / (1500 - 320)));
+        height: calc(375px + (750 - 375) * ((100vw - 320px) / (1500 - 320)));
+        &-title{
+          font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (1500 - 320)));
+          padding: calc(5px + (30 - 5) * ((100vw - 320px) / (1500 - 320))) 0;
+        }
+      }
+    }
+  }
+}

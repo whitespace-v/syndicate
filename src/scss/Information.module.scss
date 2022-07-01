@@ -57,13 +57,28 @@
     justify-content: center;
     &__image {
       img {
-        height: calc(300px + (650 - 300) * ((100vw - 320px) / (1650 - 320)));
+        height: calc(250px + (650 - 250) * ((100vw - 320px) / (1650 - 320)));
       }
     }
     &__description{
       &-name{
         img{
           width: calc(300px + (600 - 300) * ((100vw - 320px) / (1650 - 320)));
+        }
+      }
+      &-info{
+        p{
+          font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1650 - 320))) !important;
+        }
+      }
+      &-details{
+        &-paragraph{
+          p:first-child{
+            text-align: center;
+          }
+          &-text{
+            font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1650 - 320))) !important;
+          }
         }
       }
     }

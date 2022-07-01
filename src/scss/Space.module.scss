@@ -8,3 +8,8 @@
     height: calc(67px + (145 - 67) * ((100vw - 320px) / (1650 - 320)));
   }
 }
+@media (max-width: 600px) {
+  .Space{
+    height: 0;
+  }
+}

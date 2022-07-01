@@ -93,3 +93,14 @@
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 850px) {
+  .ServiceController {
+    width: calc(300px + (800 - 300) * ((100vw - 320px) / (850 - 320)));
+    &__basket{
+      &-item{
+        font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (850 - 320)));
+      }
+    }
+  }
+}
