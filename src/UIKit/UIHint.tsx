@@ -3,6 +3,7 @@ import {FaInfo,FaLevelDownAlt} from 'react-icons/fa';
 import classes from '../scss/UIHint.module.scss'
 import {useAppSelector} from "../hooks/redux";
 import {Transition} from "react-transition-group";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const UIHint = () => {
 
@@ -27,6 +28,7 @@ const UIHint = () => {
         setState(!state)
         setTouched(true)
     }
+    const { width } = useWindowDimensions(); //viewport width
 
     return (
         <div className={classes['UIHint']}>
@@ -39,11 +41,24 @@ const UIHint = () => {
                 >
                     { state =>
                         <div className={classes['UIHint__content-text'] + ' ' + classes[state]}>
-                            <b>Соберите ваш пакет услуг:</b> <br/> <br/>
-                            1. Выберите услугу из дерева услуг.<br/><br/>
-                            2. Выберите ваш тип кузова в карточке услуги. <br/><br/>
-                            3. Вращайте 3D модель автомобиля, приближайте колесиком мышки и двойным кликом выберите нужную часть/части авто. <br/><br/>
-                            4. Управляйте выбранными услугами в корзине (ниже карточки услуги).
+                            {width > 630 ?
+                                <span>
+                                    <b>Соберите ваш пакет услуг:</b> <br/> <br/>
+                                1. Выберите услугу из дерева услуг.<br/><br/>
+                                2. Выберите ваш тип кузова в карточке услуги. <br/><br/>
+                                3. Вращайте 3D модель автомобиля, приближайте колесиком мышки и двойным кликом выберите нужную часть/части авто. <br/><br/>
+                                4. Управляйте выбранными услугами в корзине (ниже карточки услуги).
+                                </span>
+                                :
+                                <span>
+                                    <b>Соберите ваш пакет услуг:</b> <br/> <br/>
+                                1. Выберите услугу из дерева услуг.<br/><br/>
+                                2. Выберите ваш тип кузова в карточке услуги. <br/><br/>
+                                3. Вращайте 3D модель автомобиля свайпом, кликом выберите нужную часть/части авто. <br/><br/>
+                                4. Управляйте выбранными услугами в корзине (ниже карточки услуги).
+                                </span>
+                            }
+
                         </div>
                     }
                 </Transition>
