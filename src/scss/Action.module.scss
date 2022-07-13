@@ -1,0 +1,26 @@
+@import 'variables';
+.Action{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  &__header{
+    font-size: $f-middle;
+    font-weight: $fw-middle;
+    width: fit-content;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text !important;
+    background: $gradient;
+  }
+  &__subheader{
+    font-size: $f-primary;
+    font-weight: $fw-primary;
+  }
+  &__paragraph{
+    max-width: 620px;
+  }
+  &__button{
+    margin: 0 auto;
+  }
+}

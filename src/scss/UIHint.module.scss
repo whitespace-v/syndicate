@@ -1,0 +1,65 @@
+@import "variables";
+.UIHint{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0 50px 10px 0;
+  &__content{
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px #833AB4;
+    background: rgba(49, 7, 75, 0.84);
+    display: flex;
+    &-text{
+      margin: 10px;
+      width: 270px;
+      &.entering{
+        animation: appearing 200ms ease-in-out forwards;
+      }
+      &.exiting{
+        animation: appearing 200ms ease-in-out alternate-reverse;
+      }
+    }
+    &-cross{
+      font-size: $f-primary;
+      position: absolute;
+      right: 0;
+      margin: -10px 25px 0 0;
+      cursor: pointer;
+      &:hover{
+        svg{
+          fill: $gray;
+        }
+      }
+    }
+  }
+}
+.compact{
+  width: fit-content;
+  cursor: pointer;
+}
+
+@keyframes appearing {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@media (max-width: 1500px) {
+  .UIHint{
+    &__content{
+      &-text{
+        //width: calc(100px + (320 - 100) * ((100vw - 320px) / (1200 - 320)));
+        font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1500 - 320)));
+      }
+    }
+  }
+}

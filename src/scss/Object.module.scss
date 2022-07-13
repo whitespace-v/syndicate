@@ -1,0 +1,36 @@
+@import '_variables';
+.Object{
+  &-nav{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: center;
+    &-item{
+      line-height: $f-primary + 5px;
+      border-radius: 80px;
+      cursor: pointer;
+      border: double 3px transparent;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      width: fit-content;
+      &.active{
+        background-image: linear-gradient(#1D1D1D, #1D1D1D),
+        radial-gradient(circle at top left, #833AB4,#FD1D1D);
+      }
+      &:hover{
+        background-image: $reverse-gradient,
+        radial-gradient(circle at top left,#FD1D1D,#833AB4);
+      }
+      &:active{
+        background-image: linear-gradient(#1D1D1D, #1D1D1D),
+        radial-gradient(circle at top left, #833AB4,#FD1D1D);
+      }
+    }
+  }
+  Canvas{
+    height: 300px;
+  }
+}
