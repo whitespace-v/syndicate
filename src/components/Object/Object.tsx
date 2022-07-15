@@ -40,7 +40,6 @@ const Object = () => {
           </div>
           <div className={classes["Object__selected-item-button"]}>
             <UIButton type={"outline"} onClick={() => dispatch(basketAppend())}>
-              {" "}
               <FaPlus /> Добавить в корзину
             </UIButton>
           </div>
@@ -66,7 +65,7 @@ const Object = () => {
             )}
           </div>
         </div>
-        <div className={classes["Object-item"]}>
+        <div className={classes["Object__item"]}>
           <Canvas
             shadows
             dpr={[1, 2]}
@@ -100,15 +99,15 @@ const Object = () => {
             />
           </Canvas>
         </div>
-        <div className={classes["Object-nav"]}>
+        <div className={classes["Object__nav"]}>
           {["Седан", "Хетчбэк", "Джип", "Микроавтобус"].map((i, index) => (
             <p
               onClick={() => clickHandler(i, index)}
               key={index}
               className={
                 index === current
-                  ? classes["Object-nav-item"] + " " + classes["active"]
-                  : classes["Object-nav-item"]
+                  ? classes["Object__nav-item"] + " " + classes["active"]
+                  : classes["Object__nav-item"]
               }
             >
               {" "}

@@ -7,6 +7,7 @@ import {FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaShare, FaTelegramPlane, FaWha
 import UIButton from '../../UIKit/UIButton';
 import {useAppDispatch} from "../../hooks/redux";
 import {modalHandler} from "../../store/reducers/ActionCreators";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 
 interface IHeader {
@@ -20,6 +21,7 @@ interface IHeader {
 
 const Header = (props: IHeader) => {
     const dispatch = useAppDispatch()
+    const { width } = useWindowDimensions(); //viewport width
 
     return (
         <div className={classes['Header']}>
@@ -44,14 +46,25 @@ const Header = (props: IHeader) => {
             </div>
 
             <div className={classes['Header__nav']}>
-                <div className={classes['Header__nav-container']}>
-                    <UIText type={'solid'} onClick={props.IntroScroll}> <a>Главная</a></UIText>
-                    <UIText type={'primary'} onClick={props.ServicesScroll}> <a>Услуги</a></UIText>
-                    <UIText type={'primary'} onClick={props.PortfolioScroll}> <a>Портфолио</a></UIText>
-                    <UIText type={'primary'} onClick={props.InformationScroll}> <a>О нас</a></UIText>
-                    <UIText type={'primary'} onClick={props.ReviewsScroll}> <a>Отзывы</a></UIText>
-                    <UIText type={'primary'} onClick={props.ContactsScroll}> <a>Контакты</a></UIText>
-                </div>
+                {
+                    width > 640 ?
+                        <div className={classes['Header__nav-container']}>
+                            <UIText type={'solid'} onClick={props.IntroScroll}> <a>Главная</a></UIText>
+                            <UIText type={'primary'} onClick={props.ServicesScroll}> <a>Услуги</a></UIText>
+                            <UIText type={'primary'} onClick={props.PortfolioScroll}> <a>Портфолио</a></UIText>
+                            <UIText type={'primary'} onClick={props.InformationScroll}> <a>О нас</a></UIText>
+                            <UIText type={'primary'} onClick={props.ReviewsScroll}> <a>Отзывы</a></UIText>
+                            <UIText type={'primary'} onClick={props.ContactsScroll}> <a>Контакты</a></UIText>
+                        </div>
+                        :
+                        <div className={classes['Header__nav-container']}>
+                            <UIText type={'solid'} onClick={props.IntroScroll}> <a>Главная</a></UIText>
+                            <UIText type={'primary'} onClick={props.ServicesScroll}> <a>Услуги</a></UIText>
+                            <UIText type={'primary'} onClick={props.ContactsScroll}> <a>Контакты</a></UIText>
+                        </div>
+
+                }
+
                 <div className={classes['Header__nav-address']}>
                     <UIText type={'primary'}> <a href='https://go.2gis.com/615y5'><FaMapMarkerAlt/> г. Владивосток, Океанский проспект, 49</a></UIText>
                 </div>

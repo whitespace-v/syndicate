@@ -26,6 +26,15 @@
       font-size: $f-primary ;
       line-height: $f-primary + 20px;
     }
+    &-logo{
+      img{
+        width: 300px;
+      }
+      &-address{
+        margin: 10px 0;
+        width: 300px;
+      }
+    }
   }
 }
 @media (max-width: 1860px) {
@@ -46,8 +55,8 @@
       }
       &-button{
         & > * {
-          font-size: calc(10px + (22 - 10) * ((100vw - 320px) / (1650 - 320))) !important;
-          line-height: calc(20px + (42 - 20) * ((100vw - 320px) / (1650 - 320))) !important;
+          font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1650 - 320))) !important;
+          line-height: calc(27px + (42 - 27) * ((100vw - 320px) / (1650 - 320))) !important;
         }
       }
     }

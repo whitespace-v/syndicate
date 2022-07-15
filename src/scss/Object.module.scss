@@ -24,7 +24,7 @@
       }
     }
   }
-  &-nav{
+  &__nav{
     display: flex;
     flex-direction: column;
     flex: 1 1 33%;
@@ -57,11 +57,40 @@
       }
     }
   }
-  &-item{
+  &__item{
     width: 1000px;
     border-radius: 12px;
     Canvas{
       height: 400px;
+    }
+  }
+}
+@media (max-width: 1230px) {
+  .Object{
+    flex-wrap: wrap;
+    &__selected{
+      order: 1;
+    }
+    &__nav{
+      order: 3;
+      flex-direction: row;
+    }
+    &__item{
+      order: 2;
+    }
+  }
+}
+@media (max-width: 1022px) {
+  .Object{
+    &__item{
+      width: calc(300px + (1000 - 300) * ((100vw - 320px) / (1022 - 320)));
+    }
+  }
+}
+@media (max-width: 400px) {
+  .Object{
+    &__nav{
+      flex-direction: column;
     }
   }
 }

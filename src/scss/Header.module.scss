@@ -125,6 +125,13 @@
     }
     &__nav{
       justify-content: center;
+      position: fixed;
+      background-color: $darkgray;
+      bottom: 0;
+      padding: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 20px;
     }
   }
 }

@@ -29,3 +29,19 @@
     }
   }
 }
+@media (max-width: 1650px) {
+  .Action{
+    margin-top: 40px;
+    &__header{
+      font-size: calc(28px + (56 - 28) * ((100vw - 320px) / (1650 - 320))) ;
+    }
+    &__subheader{
+      font-size: calc(14px + (36 - 14) * ((100vw - 320px) / (1650 - 320))) ;
+    }
+    &__button{
+      & > * {
+        line-height: 40px;
+      }
+    }
+  }
+}

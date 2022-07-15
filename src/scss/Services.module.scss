@@ -97,6 +97,13 @@
   }
 }
 
+@media (max-width: 1380px) {
+  .Services{
+    &__card{
+      width: calc(100px + (800 - 100) * ((100vw - 320px) / (1380 - 320)));
+    }
+  }
+}
 @media (max-width: 1200px) {
   .Services{
     &__title{
@@ -104,7 +111,7 @@
       margin-bottom: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
     &__content{
-      display: block;
+      //display: block;
       & > * {
         margin: 20px auto;
       }
@@ -115,11 +122,13 @@
     }
   }
 }
-
-@media (max-width: 850px) {
+@media (max-width: 750px) {
   .Services{
-      &__card{
-        width: calc(300px + (800 - 300) * ((100vw - 320px) / (850 - 320)));
-      }
+    &__content{
+      display: block;
+    }
+    &__card{
+      width: calc(300px + (800 - 300) * ((100vw - 320px) / (750 - 320)));
+    }
   }
 }
