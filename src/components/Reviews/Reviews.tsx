@@ -16,9 +16,9 @@ const Reviews = ({refProp}: {refProp: React.Ref<any>}) => {
 
     return (
         <div className={classes['Reviews']} ref={refProp}>
-            <UILine type={'horizontal'} position={'left'}/>
-            <ReviewList/>
             <UILine type={'horizontal'} position={'right'}/>
+            <ReviewList/>
+            <UILine type={'horizontal'} position={'left'}/>
         </div>
     );
 };

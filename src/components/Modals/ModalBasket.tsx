@@ -66,7 +66,6 @@ const ModalBasket = ({transition}: {transition: string}) => {
             dispatch(sendBasket({service, phone, name}))
             dispatch(basketHandler())
         }
-
     }
 
     return (

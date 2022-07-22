@@ -14,7 +14,7 @@ const PortfolioMenu = ({refProp}: {refProp: React.Ref<any>}) => {
 
     return (
         <div className={classes['Portfolio']} ref={refProp}>
-            <UILine type={'vertical'} position={'center'}/>
+            <UILine type={'horizontal'} position={'left'}/>
 
             <div className={classes['Portfolio__buttons']}>
                 <UIText type={active ? 'solid' : 'primary'} onClick={() => setActive(!active)}>Галлерея</UIText>
@@ -37,7 +37,7 @@ const PortfolioMenu = ({refProp}: {refProp: React.Ref<any>}) => {
             </Transition>
 
 
-            <UILine position={'center'} type={'vertical'}/>
+            {/*<UILine position={'right'} type={'horizontal'}/>*/}
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React from 'react';
 import CustomTreeItem from "./CustomTreeItem";
+import classes from '../../scss/ServiceList.module.scss'
 
 
 const ServicesList = () => {
     return (
-        <CustomTreeItem nodeId="1" label="Все услуги" >
+        <div className={classes['ServiceList']}>
             <CustomTreeItem nodeId="2" label="Кузов">
                 <CustomTreeItem nodeId="3" label="Пленки">
                     <CustomTreeItem nodeId="4" label="Антихром">
@@ -39,6 +40,7 @@ const ServicesList = () => {
                     <CustomTreeItem nodeId="27" label="Автосигнализация" />
                 </CustomTreeItem>
             </CustomTreeItem>
+
             <CustomTreeItem nodeId="28" label="Салон">
                 <CustomTreeItem nodeId="29" label="Химчистка"/>
                 <CustomTreeItem nodeId="30" label="Пленки">
@@ -51,9 +53,7 @@ const ServicesList = () => {
                 </CustomTreeItem>
                 <CustomTreeItem nodeId="36" label="Шумоизоляция"/>
             </CustomTreeItem>
-
-
-        </CustomTreeItem>
+        </div>
     );
 };
 

@@ -6,6 +6,7 @@
   font-size: $f-primary;
   background: $darkgray;
   z-index: 99999;
+  box-shadow: 5px 10px 10px  $darkgray;
   &__links{
     display: flex;
     align-items: center;
@@ -55,7 +56,8 @@
     padding: 5px calc(5px + (60 - 5) * ((100vw - 320px) / (1650 - 320)));
     font-size: calc(10px + (22 - 10) * ((100vw - 320px) / (1650 - 320))) !important;
     &__nav-container{
-        gap: calc(5px + (30 - 5) * ((100vw - 320px) / (1650 - 320)));
+      gap: calc(5px + (30 - 5) * ((100vw - 320px) / (1650 - 320)));
+      //gap: 0;
     }
   }
 }
@@ -108,9 +110,11 @@
 }
 @media (max-width: 670px) {
   .Header{
+    line-height: 40px;
     &__links{
       &-intro{
-        font-size: $f-min;
+        margin-left: 0;
+        font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (670 - 320)));
         &-logo{
           img:nth-child(1){
             display: none;
@@ -118,6 +122,9 @@
         }
       }
       &-phones{
+        & > *:first-child{
+          font-size: calc(18px + (14 - 18) * ((100vw - 320px) / (670 - 320)));
+        }
         & > *:last-child{
           display: none;
         }
@@ -125,13 +132,22 @@
     }
     &__nav{
       justify-content: center;
-      position: fixed;
       background-color: $darkgray;
+      border: 1px solid white;
+      box-shadow: 1px 1px 10px #833AB4;
       bottom: 0;
       padding: 10px;
+      position: fixed;
       left: 50%;
       transform: translate(-50%, 0);
-      border-radius: 20px;
+      //margin-bottom: 20px;
+      border-radius: 12px;
+      font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (670 - 320)));
+      //&-container{
+      //  display: flex;
+      //  flex-direction: column;
+      //  align-items: center;
+      //}
     }
   }
 }

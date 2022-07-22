@@ -47,7 +47,7 @@ const Header = (props: IHeader) => {
 
             <div className={classes['Header__nav']}>
                 {
-                    width > 640 ?
+                    width > 670 ?
                         <div className={classes['Header__nav-container']}>
                             <UIText type={'solid'} onClick={props.IntroScroll}> <a>Главная</a></UIText>
                             <UIText type={'primary'} onClick={props.ServicesScroll}> <a>Услуги</a></UIText>

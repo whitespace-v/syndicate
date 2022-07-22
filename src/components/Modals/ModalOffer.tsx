@@ -88,8 +88,12 @@ const ModalOffer = ({transition}: {transition: string}) => {
     }
 
     return (
-        <div className={classes['UIModal'] + ' ' + classes[transition]}>
-            <div className={classes['UIModal__container'] + ' ' + classes[transition]}>
+        <div className={classes['UIModal'] + ' ' + classes[transition]}
+             onClick={() => dispatch(modalHandler('offer'))}
+        >
+            <div className={classes['UIModal__container'] + ' ' + classes[transition]}
+                 onClick={e => e.stopPropagation()}
+            >
                 <div className={classes['UIModal__container-cross']}
                      onClick={() => dispatch(modalHandler('offer'))}
                 ><FaTimes/></div>

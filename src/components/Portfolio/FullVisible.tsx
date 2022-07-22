@@ -12,16 +12,20 @@ interface IFullVisible{
 }
 
 const FullVisible = (props: IFullVisible) => {
+
     return (
-        <div className={classes['Gallery__fullscreen']}>
+        <div className={classes['Gallery__fullscreen']}
+             onClick={() => props.setFullVisible(false)}
+        >
             <div className={classes['Gallery__fullscreen-data'] + ' ' + classes[props.transition]}>
                 <div
-                    onClick={() => props.setFullVisible(false)}
                     className={classes['Gallery__fullscreen-data-cross']}
+                    onClick={() => props.setFullVisible(false)}
                 >
                     <FaCompressAlt/>
                 </div>
                 <div className={classes['Gallery__fullscreen-data-slider']}>
+
                     <Swiper
                         spaceBetween={50}
                         slidesPerView={1}
@@ -29,11 +33,17 @@ const FullVisible = (props: IFullVisible) => {
                         modules={[Pagination]}
                     >
                         {props.slidesArray.map((image,index) => (
-                            <SwiperSlide key={index}
-                                // onMouseEnter={() => props.currentSlideHandler(index)}
+                            <div
+                                onClick={e => e.stopPropagation()}
                             >
-                                <img src={image} alt=""/>
-                            </SwiperSlide>
+                                <SwiperSlide key={index}
+                                    //
+                                    // onMouseEnter={() => props.currentSlideHandler(index)}
+                                >
+                                    <img src={image} alt=""/>
+                                </SwiperSlide>
+                            </div>
+
                         ))}
                     </Swiper>
                 </div>
