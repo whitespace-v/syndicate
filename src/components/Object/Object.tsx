@@ -1,14 +1,13 @@
 import React, {Suspense, useState} from 'react';
 import {Environment, OrbitControls } from "@react-three/drei"
 import {Canvas} from "@react-three/fiber";
-import Bus2 from '../../objects/Bus'
-import BMW from '../../objects/bmw'
-import Merc from '../../objects/Merc'
-import Lx from '../../objects/Lx2'
+import Bus from '../../objects/Bus'
+import Jeep from '../../objects/Jeep'
+import Hatchback from '../../objects/Hatchback'
+import Sedan from '../../objects/Sedan'
 import classes from '../../scss/Object.module.scss'
 import {useAppDispatch} from "../../hooks/redux";
 import {selectCar} from "../../store/reducers/ActionCreators";
-import LX570 from '../../objects/LX570';
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Object = () => {
@@ -27,7 +26,7 @@ const Object = () => {
             <div className={classes['Object']}>
                 <div className={classes['Object-nav']}>
                     {['Седан','Хетчбэк',
-                        // 'Джип',
+                        'Джип',
                         'Микроавтобус'].map((i, index) => (
                         <p onClick={() => clickHandler(i, index)}
                            key={index}
@@ -42,16 +41,16 @@ const Object = () => {
                     <ambientLight intensity={0.3} />
                     <spotLight intensity={0.3} angle={0.1} penumbra={1} position={[5, 25, 20]} />
                     <Suspense fallback={null}>
-                        { current === 0 && <Merc
+                        { current === 0 && <Bus
                             dispatch={dispatch}
                         />}
-                        { current === 1 && <BMW
+                        { current === 1 && <Jeep
                             dispatch={dispatch}
                         />}
-                        {/*{ current === 2 && <LX570*/}
-                        {/*    dispatch={dispatch}*/}
-                        {/*/>}*/}
-                        { current === 2 && <Bus2
+                        { current === 2 && <Hatchback
+                            dispatch={dispatch}
+                        />}
+                        { current === 3 && <Sedan
                             dispatch={dispatch}
                         />}
                         <Environment preset="city" />
