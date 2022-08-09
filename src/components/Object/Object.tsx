@@ -1,10 +1,10 @@
 import React, { Suspense, useState } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Bus2 from "../../objects/Bus";
-import BMW from "../../objects/bmw";
-import Merc from "../../objects/Merc";
-import Jeep from "../../objects/Jeep-compressed";
+import Bus from "../../objects/Bus";
+import Sedan from "../../objects/Sedan";
+import Hatchback from "../../objects/Hatchback";
+import Jeep from "../../objects/Jeep";
 import classes from "../../scss/Object.module.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { selectCar, basketAppend } from "../../store/reducers/ActionCreators";
@@ -80,10 +80,10 @@ const Object = () => {
               position={[5, 25, 20]}
             />
             <Suspense fallback={null}>
-              {current === 0 && <Merc dispatch={dispatch} />}
-              {current === 1 && <BMW dispatch={dispatch} />}
+              {current === 0 && <Bus dispatch={dispatch} />}
+              {current === 1 && <Sedan dispatch={dispatch} />}
               {current === 2 && <Jeep dispatch={dispatch} />}
-              {current === 3 && <Bus2 dispatch={dispatch} />}
+              {current === 3 && <Hatchback dispatch={dispatch} />}
               <Environment preset="city" />
             </Suspense>
 
