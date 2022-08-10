@@ -28,7 +28,7 @@ const Information = ({refProp}: {refProp: React.Ref<any>}) => {
                         <div className={classes['Information__description-details-paragraph-text']}>
                             <img src={wand} alt=""/>
                             <p>
-                                Мы разрабатывает стратегию работы на этапе осмотра машины,
+                                Мы разрабатываем стратегию работы на этапе осмотра машины,
                                 таким образом мы  пытаемся максимально улучшить внешний
                                 вид вашего любимого автомобиля.
                             </p>
@@ -39,7 +39,7 @@ const Information = ({refProp}: {refProp: React.Ref<any>}) => {
                         <div className={classes['Information__description-details-paragraph-text']}>
                             <img src={diamond} alt=""/>
                             <p>
-                                Наработанный нами опыт и большое число лояльных партнеров,
+                                Наработанный годами опыт и большое число лояльных партнеров,
                                 позволяют нам оказывать услуги на высоком уровне за разумную стоимость.
                             </p>
                         </div>

@@ -131,17 +131,19 @@
       }
     }
     &__nav{
+      width: 100vw;
       justify-content: center;
       background-color: $darkgray;
-      border: 1px solid white;
-      box-shadow: 1px 1px 10px #833AB4;
+      border-top: 1px solid white;
+      //box-shadow: 1px 1px 10px #833AB4;
       bottom: 0;
+      margin-bottom: -1px;
       padding: 10px;
       position: fixed;
       left: 50%;
       transform: translate(-50%, 0);
       //margin-bottom: 20px;
-      border-radius: 12px;
+      //border-radius: 12px;
       font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (670 - 320)));
       //&-container{
       //  display: flex;

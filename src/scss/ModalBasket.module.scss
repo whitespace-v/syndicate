@@ -146,12 +146,12 @@
 }
 @media (max-width: 750px) {
   .Basket-popup{
-    margin: 0 20px 20px 0;
-    bottom: 7%;
+    margin: 0 5px 15px 0;
+    bottom: 0;
   }
   .ModalBasket{
     margin: 0 20px 20px 0;
-    bottom: 7%;
+    bottom: 10%;
     //z-index: 9999999999;
   }
   :global{
@@ -159,8 +159,12 @@
       z-index: 1;
     }
     .wrap_ebd0 {
-      bottom: 7% !important;
+      bottom: 0 !important;
       z-index: 1 !important;
+    }
+    ._orientationLeft_e5d4 .button_f5b9{
+      margin-left: 5px !important;
+      margin-bottom: 5px !important;
     }
   }
 }

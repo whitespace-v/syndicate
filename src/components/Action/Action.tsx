@@ -13,8 +13,8 @@ const Action = () => {
             <div className={classes['Action']}>
                 <p className={classes['Action__header']}>С чего начать ?</p>
                 <p className={classes['Action__subheader']}>Запишитесь на консультацию по детейлингу!</p>
-                <p className={classes['Action__paragraph']}>Мы проверим состояние вашего автомобиля, расскажем о
-                    подходящих защитных покрытиях и подберем идеальный вариант детейлинга.</p>
+                <p className={classes['Action__paragraph']}>Мы проверим состояние вашего автомобиля, проконсультируем о
+                    подходящих защитных покрытиях и подберем идеальный вариант комплекса услуг.</p>
                 <div className={classes['Action__button']}>
                     <UIButton type={'outline'} onClick={() => dispatch(modalHandler('consultation'))}>
                         <FaHeadset/>КОНСУЛЬТАЦИЯ</UIButton>

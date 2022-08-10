@@ -28,7 +28,7 @@ const Object = () => {
     <>
       <div className={classes["Object"]}>
         <div className={classes["Object__selected"]}>
-          <div className={classes["Object__selected-title"]}>Выбрано:</div>
+          <div className={classes["Object__selected-title"]}> <br/> Выбрано:</div>
           <div className={classes["Object__selected-item"]}>
             Тип кузова: <div> {selectedCar} </div>
           </div>
@@ -46,6 +46,7 @@ const Object = () => {
           <div className={classes["Object__selected-item-hint"]}>
             {width > 630 ? (
               <span>
+                <br/>
                 <b>Соберите ваш пакет услуг:</b> <br /> <br />
                 1. Выберите услугу из дерева услуг.
                 <br />
@@ -55,6 +56,7 @@ const Object = () => {
               </span>
             ) : (
               <span>
+                <br/>
                 <b>Соберите ваш пакет услуг:</b> <br /> <br />
                 1. Выберите услугу из дерева услуг.
                 <br />
@@ -80,10 +82,10 @@ const Object = () => {
               position={[5, 25, 20]}
             />
             <Suspense fallback={null}>
-              {current === 0 && <Bus dispatch={dispatch} />}
-              {current === 1 && <Sedan dispatch={dispatch} />}
+              {current === 0 && <Sedan dispatch={dispatch} />}
+              {current === 1 && <Hatchback dispatch={dispatch} />}
               {current === 2 && <Jeep dispatch={dispatch} />}
-              {current === 3 && <Hatchback dispatch={dispatch} />}
+              {current === 3 && <Bus dispatch={dispatch} />}
               <Environment preset="city" />
             </Suspense>
 

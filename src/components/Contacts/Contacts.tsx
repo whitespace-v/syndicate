@@ -39,14 +39,14 @@ const Contacts = ({refProp} : {refProp: React.Ref<any>}) => {
                             </span> </p>
                             <p onClick={() => window.open('https://t.me/SyndicateDetailing', '_self')}>
                                 <FaTelegram/>
-                                <span> <UIText type={'primary'}>&nbsp;+7 (914) 320-59-50</UIText></span>
+                                <span> <UIText type={'primary'}>&nbsp;+7 (964) 444-48-47</UIText></span>
 
                             </p>
                         </div>
                         <div className={classes['Contacts__info-credentials-block']}>
                             <p className={classes['title']}>График работы:</p>
                             <p>Ежедневно с <b>09:00</b> до <b>23:00</b></p>
-                            <UIText type={'primary'}> <p onClick={() => openInNewTab('https://go.2gis.com/615y5')}><FaMapMarkerAlt/> г. Владивосток, <br/> Океанский проспект, 49</p></UIText>
+                            <UIText type={'primary'}> <p onClick={() => openInNewTab('https://go.2gis.com/615y5')}><FaMapMarkerAlt/> г. Владивосток, <br/> Острякова, 49</p></UIText>
                         </div>
                     </div>
                 </div>

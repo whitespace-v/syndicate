@@ -66,7 +66,7 @@ const Header = (props: IHeader) => {
                 }
 
                 <div className={classes['Header__nav-address']}>
-                    <UIText type={'primary'}> <a href='https://go.2gis.com/615y5'><FaMapMarkerAlt/> г. Владивосток, Океанский проспект, 49</a></UIText>
+                    <UIText type={'primary'}> <a href='https://go.2gis.com/615y5'><FaMapMarkerAlt/> г. Владивосток, Острякова, 49</a></UIText>
                 </div>
             </div>
         </div>

@@ -125,89 +125,89 @@ export default function Model({dispatch} : {dispatch: any}) {
             //@ts-ignore
                onClick={ width < 630 ? e => {e.stopPropagation(); clickHandler(e)}: null } //mobile
         >
-            <mesh geometry={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.geometry} material={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />
-            <mesh geometry={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.geometry} material={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.material} position={[-72.7, 0.53, 4.83]} rotation={[1.83, -0.26, 0]} scale={2.05} />
-            <mesh geometry={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.geometry} material={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />
-            <mesh geometry={nodes['mercedes_s-class_s580'].geometry} material={materials['(null)']} position={[6.49, 0, 0]} rotation={[Math.PI / 2, 0, 0]} />
-            <mesh geometry={nodes.BMW.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW003.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW004.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW006.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW007.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW008.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW009.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW010.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW011.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW012.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW013.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW014.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW015.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW016.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW017.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW018.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW019.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW020.geometry} material={materials['gum.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW021.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW022.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW023.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW024.geometry} material={materials['(null).001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW025.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'12'} geometry={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.geometry} material={nodes.Mesh1494_Group26_Group25_Group1_G_2016_Lexus_LX570__1_1_Lexus_L.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />
+            <mesh name={'13'} geometry={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.geometry} material={nodes.Mesh7_Group3_Group2_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_.material} position={[-72.7, 0.53, 4.83]} rotation={[1.83, -0.26, 0]} scale={2.05} />
+            <mesh name={'14'} geometry={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.geometry} material={nodes.Mesh1410_Group8_Group1_G_2016_Lexus_LX570__1_1_Lexus_LX570_2016.material} position={[-72.75, 0, 4.83]} rotation={[1.83, 0.24, -0.13]} scale={2.05} />
+            <mesh name={'15'} geometry={nodes['mercedes_s-class_s580'].geometry} material={materials['(null)']} position={[6.49, 0, 0]} rotation={[Math.PI / 2, 0, 0]} />
+            <mesh name={'16'} geometry={nodes.BMW.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Днище'} geometry={nodes.BMW003.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'18'} geometry={nodes.BMW004.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            {/*<mesh name={'19'} geometry={nodes.BMW006.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />*/}
+            <mesh name={'Корпус правого зеркала'} geometry={nodes.BMW007.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Заднее правое стекло'} geometry={nodes.BMW008.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1e'} geometry={nodes.BMW009.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1r'} geometry={nodes.BMW010.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1t'} geometry={nodes.BMW011.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1y'} geometry={nodes.BMW012.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1u'} geometry={nodes.BMW013.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1i'} geometry={nodes.BMW014.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1o'} geometry={nodes.BMW015.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1p'} geometry={nodes.BMW016.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1['} geometry={nodes.BMW017.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1]'} geometry={nodes.BMW018.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1a'} geometry={nodes.BMW019.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1s'} geometry={nodes.BMW020.geometry} material={materials['gum.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задний левый диск'} geometry={nodes.BMW021.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задний правый диск'} geometry={nodes.BMW022.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1g'} geometry={nodes.BMW023.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1h'} geometry={nodes.BMW024.geometry} material={materials['(null).001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Лобовое стекло'} geometry={nodes.BMW025.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
             <group rotation={[Math.PI / 2, 0, 0]} scale={0.49}>
-                <mesh geometry={nodes.BMW027_1.geometry} material={materials.body_color} />
-                <mesh geometry={nodes.BMW027_2.geometry} material={materials.body_color} />
+                <mesh name={'Передний бампер'} geometry={nodes.BMW027_1.geometry} material={materials.body_color} />
+                <mesh name={'1l'} geometry={nodes.BMW027_2.geometry} material={materials.body_color} />
             </group>
-            <mesh geometry={nodes.BMW028.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW029.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW030.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW031.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW033.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW034.geometry} material={materials['(null).001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW037.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW038.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW039.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW032.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW035.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW041.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW026.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW001.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW040.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW036.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW042.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW044.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW045.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW046.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW047.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW048.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW049.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW051.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW052.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW053.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW054.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW056.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW050.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW055.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW057.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW058.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW059.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW060.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW061.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW062.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW002.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW063.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW064.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW065.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW066.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW067.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW068.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW069.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW070.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW071.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW072.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW073.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW074.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.BMW075.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
-            <mesh geometry={nodes.LKSS_SIZE_16001_Mesh_2009.geometry} material={nodes.LKSS_SIZE_16001_Mesh_2009.material} position={[-63.65, 0, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={1.93} />
-            <mesh geometry={nodes.LKSS_SIZE_028_Mesh_2010.geometry} material={nodes.LKSS_SIZE_028_Mesh_2010.material} position={[-63.65, 0, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={1.93} />
+            <mesh name={'Капот'} geometry={nodes.BMW028.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задний бампер'} geometry={nodes.BMW029.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Заднее стекло'} geometry={nodes.BMW030.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1v'} geometry={nodes.BMW031.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1b'} geometry={nodes.BMW033.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1n'} geometry={nodes.BMW034.geometry} material={materials['(null).001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя правая ручка'} geometry={nodes.BMW037.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1,'} geometry={nodes.BMW038.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Заднее левое крыло'} geometry={nodes.BMW039.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            {/*<mesh name={'1/'} geometry={nodes.BMW032.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />*/}
+            <mesh name={'Передняя левая фара'} geometry={nodes.BMW035.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Переднее правое стекло'} geometry={nodes.BMW041.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Молдинг хром'} geometry={nodes.BMW026.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1к'} geometry={nodes.BMW001.geometry} material={materials.black_plastic_gloss} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1е'} geometry={nodes.BMW040.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя правая дверь'} geometry={nodes.BMW036.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя правая дверь'} geometry={nodes.BMW042.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя левая ручка'} geometry={nodes.BMW044.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя правая ручка'} geometry={nodes.BMW045.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя левая ручка'} geometry={nodes.BMW046.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Переднее левое крыло'} geometry={nodes.BMW047.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Переднее правое крыло'} geometry={nodes.BMW048.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Багажник'} geometry={nodes.BMW049.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1ч'} geometry={nodes.BMW051.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Заднее правое крыло'} geometry={nodes.BMW052.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1м'} geometry={nodes.BMW053.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1и'} geometry={nodes.BMW054.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Крыша'} geometry={nodes.BMW056.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Переднее левое стекло'} geometry={nodes.BMW050.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Заднее левое стекло'} geometry={nodes.BMW055.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'1ю'} geometry={nodes.BMW057.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Матовый пластик'} geometry={nodes.BMW058.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Шильдики'} geometry={nodes.BMW059.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя правая фара'} geometry={nodes.BMW060.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя правая доп. оптика'} geometry={nodes.BMW061.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передняя левая доп. оптика'} geometry={nodes.BMW062.geometry} material={materials['Rg2Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Передний левый диск'} geometry={nodes.BMW002.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'н1'} geometry={nodes.BMW063.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задний правый диск'} geometry={nodes.BMW064.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'ш1'} geometry={nodes.BMW065.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя левая фара'} geometry={nodes.BMW066.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя правая фара'} geometry={nodes.BMW067.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'х1'} geometry={nodes.BMW068.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задня правая доп. оптика'} geometry={nodes.BMW069.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Задняя левая доп. оптика'} geometry={nodes.BMW070.geometry} material={materials['Rg1Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'ч1'} geometry={nodes.BMW071.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            {/*<mesh name={'с1'} geometry={nodes.BMW072.geometry} material={materials.black_plastic_matt} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />*/}
+            <mesh name={'м1'} geometry={nodes.BMW073.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'и1'} geometry={nodes.BMW074.geometry} material={materials['Meshpart12Mtl.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'Корпус левого зеркала'} geometry={nodes.BMW075.geometry} material={materials.body_color} rotation={[Math.PI / 2, 0, 0]} scale={0.49} />
+            <mesh name={'ь1'} geometry={nodes.LKSS_SIZE_16001_Mesh_2009.geometry} material={nodes.LKSS_SIZE_16001_Mesh_2009.material} position={[-63.65, 0, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={1.93} />
+            <mesh name={'б1'} geometry={nodes.LKSS_SIZE_028_Mesh_2010.geometry} material={nodes.LKSS_SIZE_028_Mesh_2010.material} position={[-63.65, 0, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={1.93} />
         </group>
     )
 }

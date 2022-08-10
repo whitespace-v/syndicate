@@ -5,7 +5,7 @@ import {basketHandler, basketRemove, sendBasket} from "../../store/reducers/Acti
 import input__class from '../../scss/UIInput.module.scss'
 import classes from "../../scss/ModalBasket.module.scss";
 import UIButton from "../../UIKit/UIButton";
-import {FaArrowLeft, FaPaperPlane, FaPlay, FaTimes, FaTrash} from "react-icons/fa";
+import {FaArrowLeft, FaPaperPlane, FaTimes, FaTrash} from "react-icons/fa";
 import InputMask from "react-input-mask";
 
 const ModalBasket = ({transition}: {transition: string}) => {
