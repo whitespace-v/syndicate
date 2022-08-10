@@ -1,5 +1,5 @@
 # Getting Started into Syndicate web app project:
-Use the last version (v1.0.6) branch by preference.  
+Use the last version (v1.0.7) branch by preference.  
 In case of big difference between versions and project architecture the solution of 
 publishing as different versions was made.  
 ## Technical stack:
